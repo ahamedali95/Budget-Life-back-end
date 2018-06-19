@@ -1,0 +1,23 @@
+class Api::V1::TransactionsController < ApplicationController
+  def index
+    @transactions = Transaction.all
+    render json: @transactions
+  end
+
+  def create
+    @transaction = Transaction.new(get_params)
+
+    if @transaction.valid?
+     @transaction.save
+     render json: @transaction
+    else
+      render json: {error: "something went wrong!"}
+    end
+  end
+
+  private
+
+  def get_params
+    params.require(:transaction).permit(:amount, :date, :description, :typed, :user_id, :category_id)
+  end
+end
