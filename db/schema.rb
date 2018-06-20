@@ -16,10 +16,9 @@ ActiveRecord::Schema.define(version: 2018_06_19_015126) do
   enable_extension "plpgsql"
 
   create_table "bills", force: :cascade do |t|
-    t.string "due_date"
+    t.datetime "due_date"
     t.string "due_amount"
-    t.string "name"
-    t.text "description"
+    t.string "description"
     t.integer "user_id"
     t.integer "category_id"
     t.datetime "created_at", null: false
@@ -33,11 +32,10 @@ ActiveRecord::Schema.define(version: 2018_06_19_015126) do
   end
 
   create_table "event_plannings", force: :cascade do |t|
-    t.string "date"
+    t.datetime "date"
     t.string "name"
     t.string "current_savings"
     t.string "goal_amount"
-    t.string "amount_needed"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -45,9 +43,9 @@ ActiveRecord::Schema.define(version: 2018_06_19_015126) do
 
   create_table "transactions", force: :cascade do |t|
     t.string "amount"
-    t.string "date"
-    t.text "description"
-    t.string "typed"
+    t.datetime "date"
+    t.string "description"
+    t.string "transaction_type"
     t.integer "user_id"
     t.integer "category_id"
     t.datetime "created_at", null: false
