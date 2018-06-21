@@ -18,6 +18,6 @@ class Api::V1::BillsController < ApplicationController
   private
 
   def get_params
-    params.require(:bill).permit(:due_date, :due_amount, :name, :description, :user_id, :category_id)
+    params.require(:bill).permit(:due_date, :due_amount, :description, :user_id, :category_id)
   end
 end
