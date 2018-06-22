@@ -3,15 +3,29 @@ categories = [
   "Miscellaneous",
   "Electricity",
   "Rent",
-  "Grocery",
+  "Groceries",
   "Loan",
   "Phone Service",
   "Trip",
   "Clothing",
   "Car Service",
   "Home Service",
-  "Medical Service"
-  ];
+  "Medical Service",
+  "Deposit",
+  "Beer",
+  "Movies",
+  "Birthday Money",
+  "Subway Ticket",
+  "Bus Ticket",
+  "Music Festival",
+  "Vegas",
+  "Fast Food",
+  "Enertainment",
+  "Sports Event",
+  "Bar",
+  "Gambling"
+
+].sort
 
   index = 0
   while(index < categories.length) do

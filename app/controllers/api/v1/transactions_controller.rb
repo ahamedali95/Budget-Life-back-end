@@ -5,6 +5,7 @@ class Api::V1::TransactionsController < ApplicationController
   end
 
   def create
+     # byebug
     @transaction = Transaction.new(get_params)
 
     if @transaction.valid?
