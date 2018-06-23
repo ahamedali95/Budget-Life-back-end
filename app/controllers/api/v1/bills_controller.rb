@@ -4,6 +4,11 @@ class Api::V1::BillsController < ApplicationController
     render json: @bills
   end
 
+  def show
+    @bill = Bill.find(params[:id])
+    render json: @bill
+  end
+
   def create
     @bill = Bill.new(get_params)
 
@@ -13,6 +18,12 @@ class Api::V1::BillsController < ApplicationController
     else
       render json: {error: "something went wrong!"}
     end
+  end
+
+  def destroy
+    @bill = Bill.find(params[:id])
+    @bill.destroy
+    render json: {message: "Successful Deletion"}
   end
 
   private

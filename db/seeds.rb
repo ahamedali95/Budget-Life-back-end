@@ -11,7 +11,8 @@ categories = [
   "Clothing",
   "Car Service",
   "Home Service",
-  "Medical Service"
+  "Medical Service",
+  "Restaurant"
   ];
 
   index = 0

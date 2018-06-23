@@ -37,8 +37,6 @@ ActiveRecord::Schema.define(version: 2018_06_19_015126) do
     t.string "current_savings"
     t.string "goal_amount"
     t.integer "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "transactions", force: :cascade do |t|
