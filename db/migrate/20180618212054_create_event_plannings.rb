@@ -6,8 +6,6 @@ class CreateEventPlannings < ActiveRecord::Migration[5.2]
       t.string :current_savings
       t.string :goal_amount
       t.integer :user_id
-
-      t.timestamps
     end
   end
 end
