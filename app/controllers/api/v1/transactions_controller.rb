@@ -7,7 +7,7 @@ class Api::V1::TransactionsController < ApplicationController
   def create
      # byebug
     @transaction = Transaction.new(get_params)
-
+    
     if @transaction.valid?
      @transaction.save
      render json: @transaction
