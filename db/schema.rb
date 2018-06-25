@@ -16,8 +16,8 @@ ActiveRecord::Schema.define(version: 2018_06_19_015126) do
   enable_extension "plpgsql"
 
   create_table "bills", force: :cascade do |t|
-    t.datetime "due_date"
-    t.string "due_amount"
+    t.datetime "date"
+    t.string "amount_due"
     t.string "description"
     t.integer "user_id"
     t.integer "category_id"
